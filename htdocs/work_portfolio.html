@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!--メディアクエリを有効にする記述　-->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>ポートフォリオ</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="js/common.js" />
+    <link rel="stylesheet" href="css/works.css" />
+
+    <!-- fonts -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet"/> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet"/> -->
+    <link href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" rel="stylesheet">
+
+    <!-- jQuery読み込み-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container flex">
+        <div class="portfolio">
+          <a href="index.html">Portfolio</a>
+        </div>
+        <div class="nav">
+          <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+          <input id="drawer_input" class="drawer_hidden" type="checkbox" />
+          <!-- ハンバーガーアイコン -->
+          <label for="drawer_input" class="drawer_open"><span></span></label>
+          <nav class="pc-nav">
+            <ul class="flex menu-lists">
+              <li class="menu-lists_content hover-marker homeonly"><a href="index.html">Home</a></li>
+              <li class="menu-lists_content only-works hover-marker">
+                <a href="index.html#works">Works</a>
+                <ul class="dropdown_lists">
+                  <li class="dropdown_list"><a href="work_nekonosu.html">保護猫カフェサイト</a></li>
+                  <li class="dropdown_list"><a href="work_sugutabe.html">スグ食べLP</a></li>
+                  <li class="dropdown_list"><a href="work_portfolio.html">ポートフォリオサイト</a></li>
+                  <li class="dropdown_list"><a href="work_banner.html">イベントバナー</a></li>
+                  <li class="dropdown_list"><a href="work_kawachi.html">河内町役場名刺</a></li>
+                  <li class="dropdown_list"><a href="work_cardme.html">自分の名刺</a></li>
+                </ul>
+              </li>
+              <li class="menu-lists_content hover-marker"><a href="about.html">About</a></li>
+              <li class="menu-lists_content hover-marker"><a href="#contact">Contact</a></li>
+            </ul>
+            <ul class="menu_sns-icon">
+                <li class="icon"><a href="https://twitter.com/non_no_design"><i class="fa-brands fa-x-twitter icon-size"></i></a></li>
+                <li class="icon"><a href="https://www.instagram.com/non_no_design/"><i class="fa-brands fa-instagram icon-size"></i></a></li>
+                <li class="icon"><a href="mailto:non.marine380@gmail.com"><i class="fa-regular fa-envelope icon-size"></i></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="top">
+            <img src="images/works/top.webp" alt="top画像"/>
+          <div class="top_title">
+            <h2>- Works -</h2>
+            <h3>制作実績</h3>
+          </div>
+      </section>
+      <section class="works">
+        <div class="container">
+          <h2 class="title js-slidein_bottom">ポートフォリオサイト</h2>
+          <div class="work-img js-slidein_bottom">
+            <img src="images/works/mock_up_portfolio_front.png" alt="mock-up写真" />
+            <!-- <div class="work-link">
+              <a href="https://nondesign.sakura.ne.jp/sugutabe/">サイトを見る</a>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div> -->
+          </div>
+            <ul>
+              <li class="work-content flex">
+                <p class="content-title js-slidein_left">概要</p>
+                <p class="work-desc">ポートフォリオサイトを作成。（レスポンシブ対応済み）</p>
+              </li>
+              <li class="work-content flex">
+                <p class="content-title js-slidein_left">制作の目的</p>
+                <p class="work-desc">自分の作品・経歴を多くの人に周知し、仕事に繋げるために制作。</p>
+              </li>
+              <li class="work-content flex">
+                <p class="content-title js-slidein_left">デザイン</p>
+                <p class="work-desc">全体的にデザインはシンプルにし、ダイレクトに伝えたい内容が届くようにしました。第一に作品を見ていただきたいという思いから制作実績を先に配置。各作品を作る際の想いや過程を記載しています。どんなスキルを持っているのかアピールするため、制作実績に使用ツールを記載するのに加えて、具体的にどのレベル感で作業できるのかをAboutページに記載しました。</p>
+              </li>
+              <img class="website-img" src="images/works/portfolio_page.png" alt="Webサイト写真">
+              <li class="work-content flex">
+                <p class="content-title js-slidein_left">使用ツール</p>
+                <p class="work-desc">Visual Studio Code、Studio</p>
+              </li>
+              <li class="work-content flex">
+                <p class="content-title js-slidein_left">制作期間</p>
+                <p class="work-desc">企画 3日　/　デザイン 3日　/　コーディング 3~4日間</p>
+             </li>
+            </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <ul class="flex">
+          <li class="contact">
+            <h2 id="contact">- Contact -</h2>
+            <h3>お問い合わせ</h3>
+            <div>
+              <a href="https://twitter.com/non_no_design"><i class="fa-brands fa-x-twitter icon-size"></i></a>
+              <a href="https://www.instagram.com/non_no_design/"><i class="fa-brands fa-instagram icon-size"></i></a>
+              <a href="mailto:non.marine380@gmail.com"><i class="fa-regular fa-envelope icon-size"></i></a>
+            </div>
+          </li>
+          <li class="footer_menu">
+            <a href="index.html">Home</a>
+            <a href="index.html#works">Works</a>
+            <a href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- JavaScript 読み込み　-->
+  <script src="js/common.js"></script>
+  </body>
+</html>

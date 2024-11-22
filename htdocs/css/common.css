@@ -1,0 +1,564 @@
+@charset "utf-8";
+/* CSS Document */
+/*------------------------全体設定--------------------------------*/
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("../fonts/NotoSansJP-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("../fonts/Caveat-Regular.woff") format("woff");
+}
+
+html {
+  font-size: 62.5%; /* 16px * 62.5% = 10px */
+  width: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+}
+body {
+  font-display: swap;
+  color: #5B3900; /* RGB */
+  font-family: "Noto Sans JP", sans-serif, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  /* src: url("../fonts/NotoSansJP-Regular.woff") format("woff"); */
+  font-weight: 400;
+  font-size: 1.8em;
+  line-height: 3.2rem;
+  text-align: center;
+  background-color: #F6F8F9;
+  overflow: hidden;
+  position: relative;
+}
+h1{
+  font-family: "Caveat";
+  /* src: url("../fonts/Caveat-Regular.woff") format("woff"); */
+  font-size: 12.0rem;
+}
+h2 {
+    font-family: "Caveat";
+    /* src: url("../fonts/Caveat-Regular.woff") format("woff"); */
+    font-size: 6.5rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+/* 要素を横並びにする設定　*/
+.flex {
+  display: flex;
+  justify-content: center;
+}
+/*　左右反転　*/
+.flex--reverse {
+  flex-direction: row-reverse;
+}
+/* 幅指定（1080px）*/
+.container {
+  max-width: 1080px;
+  width: 90%;
+  margin: 0 auto;
+  /* overflow: hidden; */
+}
+/* section間の余白*/
+section {
+  padding-top: 170px;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+/* アニメーション設定 */
+/* 上からスライドイン */
+.js-slidein_top {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: all 1.0s;
+}
+/* 下からスライドイン */
+.js-slidein_bottom {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(50px);
+  transition: all 1.0s;
+}
+/* 右からスライドイン */
+.js-slidein_right {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: all 1.0s;
+}
+/* 左からスライドイン */
+.js-slidein_left {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-100%);
+  transition: all 1.0s;
+}
+
+.scroll_topbottom {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+.scroll_rightleft {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0px);
+}
+
+/* Loading　アニメーション
+#loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #B3DEEB;
+    transition: all 1s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+.loader{
+  width:200px;
+  height:60px;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+}
+.circle{
+  width:20px;
+  height:20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  left:15%;
+  transform-origin: 50%;
+  animation: circle .5s alternate infinite ease;
+}
+
+@keyframes circle{
+  0%{
+      top:60px;
+      height:5px;
+      border-radius: 50px 50px 25px 25px;
+      transform: scaleX(1.7);
+  }
+  40%{
+      height:20px;
+      border-radius: 50%;
+      transform: scaleX(1);
+  }
+  100%{
+      top:0%;
+  }
+}
+.circle:nth-child(2){
+  left:45%;
+  animation-delay: .2s;
+}
+.circle:nth-child(3){
+  left:auto;
+  right:15%;
+  animation-delay: .3s;
+}
+.shadow{
+  width:20px;
+  height:4px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  top:62px;
+  transform-origin: 50%;
+  z-index: -1;
+  left:15%;
+  filter: blur(1px);
+  animation: shadow .5s alternate infinite ease;
+}
+
+@keyframes shadow{
+  0%{
+      transform: scaleX(1.5);
+  }
+  40%{
+      transform: scaleX(1);
+      opacity: .7;
+  }
+  100%{
+      transform: scaleX(.2);
+      opacity: .4;
+  }
+}
+.shadow:nth-child(4){
+  left: 45%;
+  animation-delay: .2s
+}
+.shadow:nth-child(5){
+  left:auto;
+  right:15%;
+  animation-delay: .3s;
+}
+.loader span{
+  position: absolute;
+  top:75px;
+  font-family: 'Lato';
+  font-size: 20px;
+  letter-spacing: 12px;
+  color: #fff;
+  left:15%;
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+} */
+
+/* ページ遷移時フェードインアウト */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:#fff;  /* 背景カラー */
+  z-index: 9999;  /* 一番手前に */
+  pointer-events: none;  /* 他の要素にアクセス可能にするためにポインターイベントは無効に */
+  opacity: 1;  /* 初期値 : 透過状態 */
+  animation: mainfade 1s ease-out both;
+  animation-delay: 0.5s;
+}
+@keyframes mainfade {
+  0% {
+    opacity: 1;
+  }
+    100% {
+    opacity: 0;
+  }
+}
+
+
+/*------------------------header--------------------------------*/
+header {
+  width: 100%;
+  padding: 30px 0;
+  /* height: 80px; */
+  background-color: #fff;
+  color: #2E2721;
+}
+.menu-lists_content{
+  width: 10vw;
+  position: relative;
+}
+header .flex{
+  justify-content: space-between;
+}
+header a{
+  color: #2E2721;
+}
+header .homeonly{
+  display: none;
+}
+.only-works > a::after{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f078";
+  margin-left: 1rem;
+}
+/* Hover */
+.header .portfolio:hover{
+  transform: scale(1.1);
+}
+/* Hoverするとマーカーが引かれる */
+.hover-marker{
+  position: relative;
+  z-index: 1;
+}
+.hover-marker::before {
+  background: #B3DEEB;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
+  z-index: -1;
+}
+/* .hover-marker:hover {
+  color: #fff;
+} */
+.hover-marker:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+/* Hoverするとbg色変化＋テキスト */
+.hover-text {
+  position: relative;
+  overflow: hidden;
+}
+.hover-text::before,
+.hover-text::after {
+  content: "";
+  display: block;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  margin: auto;
+  transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+  opacity: 0;
+}
+.hover-text::before {
+  background: rgba(244,235,159,.7);
+  width: 100%;
+  height: 100%;
+}
+.hover-text::after {
+  color: #2E2721;
+  content: "More View";
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+}
+ 
+.hover-text:hover::before,
+.hover-text:hover::after {
+  opacity: 1;
+}
+
+/* ドロップダウンメニュー */
+.dropdown_lists {
+  /* デフォルトでは非表示の状態にしておく */
+  /* display: none; */
+  /* width: 100%; */
+  width: max-content;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  visibility: hidden;
+}
+.only-works:hover .dropdown_lists {
+  /* Gナビメニューにホバーしたら表示 */
+  visibility: visible;
+  /* display: block; */
+}
+.dropdown_list {
+  background-color: #fff;
+  transition: all .3s;
+  position: relative;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.dropdown_list:hover{
+  background-color: #F4EB9F;
+}
+/* ハンバーガーメニュー */
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
+/* SNSアイコン */
+.menu_sns-icon{
+  display: none;
+}
+
+/*------------------------footer--------------------------------*/
+.footer{
+  color: #2E2721;
+  margin-top: 160px;
+  background-image: url(../images/top/bg_blue.webp);
+  border-radius: 50% 50% 0 0 ;
+}
+.footer a{
+  color: #2E2721;
+}
+.contact a{
+  margin-right: 15px;
+}
+.contact a:last-child{
+  margin-right: 0 ;
+}
+.footer ul {
+  padding: 130px 0 60px 0;
+  justify-content: space-around;
+}
+.contact h2, .contact h3{
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.footer .icon-size{
+  font-size: 2.0em;
+}
+.footer_menu a{
+  display: block;
+  margin-bottom: 20px;
+}
+.footer_menu a:last-child{
+  margin-bottom: 0;
+}
+
+
+
+
+/*---------------------------------------------------------------------*/
+/*------------------------レスポンシブ対応--------------------------------*/
+/*---------------------------------------------------------------------*/
+@media (max-width: 767px) {
+/*------------------------全体設定--------------------------------*/
+/* 幅指定 */
+.container {
+  width: 80%;
+}
+/* section間の余白*/
+section {
+  padding-top: 100px;
+}
+
+
+/*------------------------header--------------------------------*/
+header .homeonly{
+  display: block;
+}
+/* --- ハンバーガーメニュー --- */
+.dropdown_lists{
+  display: none;
+}
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 45px;
+  /* right: 20px; */
+  z-index: 100; /* 重なり順を一番上にする */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+/* メニューのデザイン*/
+.pc-nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0%;
+  left: 100%; /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background-color:#F4EB9F;
+  transition: .5s;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* メニュー黒ポチを消す */
+.menu-lists {
+  list-style: none;
+  display: block;
+  margin-top: 15vh;
+}
+.menu-lists_content{
+  margin-bottom: 20px;
+  width: 100%;
+}
+.menu-lists_content a {
+  text-decoration: none;
+}
+.only-works > a::after{
+  content: "";
+  margin-left: 0;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .pc-nav {
+  left: 0;/* メニューを画面に入れる */
+  
+}
+
+/* SNSアイコン */
+.menu_sns-icon{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.icon-size{
+  font-size: 1.7em;
+}
+.icon{
+  margin-right: 15px;
+}
+.icon:last-child{
+  margin-right: 0 ;
+}
+/*------------------------footer--------------------------------*/
+.footer{
+  margin-top: 100px;
+}
+.contact h2{
+  font-size: 4.8rem;
+}
+.footer .icon-size{
+  font-size: 1.7em;
+}
+}

@@ -1,0 +1,265 @@
+/*------------------------top--------------------------------*/
+.top{
+    padding-top: 0;
+}
+.top img{
+    max-width: 1400px;
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+}
+.top_title{
+    background-color: #FFF;
+    max-width: 320px;
+    width: 100%;
+    padding: 50px 0px;
+    position: relative;
+    top: -100px;
+    left: 170px;
+}
+.top_title h2{
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+.top_title p{
+   font-size: 2.0rem;
+}
+
+/*------------------------profile--------------------------------*/
+.profile{
+    padding-top: 100px;
+}
+.title-bg{
+    font-family: "Caveat";
+    src: url("../fonts/Caveat-Regular.woff") format("woff");
+    font-size: 14rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #F4EB9F;
+    text-align: left;
+    margin-bottom: -25px;
+    margin-left: 0px;
+    position: relative;
+    z-index: -1;
+}
+.title_jp{
+    font-size: 3.2rem;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 80px;
+    margin-left: 55px;
+}
+
+.profile .flex{
+    justify-content: space-around;
+    align-items: center;
+}
+.aboutme_img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 7px 7px 17px #F4EB9F;
+}
+.profile ul{
+    background-color: #FFF;
+    border-radius: 30px;
+    padding: 50px 80px;
+}
+.profile-content{
+    text-align: left;
+    margin-bottom: 30px;
+}
+.profile-content:last-child{
+    margin-bottom: 0;
+}
+.profile-desc{
+    font-size: 2.2rem;
+}
+
+/*------------------------career--------------------------------*/
+.career{
+    position: relative;
+}
+.career .title-bg{
+    color: #B3DEEB;
+}
+.career ul {
+    position: relative;
+    padding: 2em 0;
+    border-left: 2px solid;
+    margin: 0 50px;
+  }
+.career-list{
+    margin-bottom: 30px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.career-list:last-child{
+    margin-bottom: 0;
+}
+  .career li::before {
+    position: absolute;
+    left: -11px;
+    content: ' ';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #2E2721;
+    border-radius: 20px;
+    z-index: 10;
+  }
+  .career-date{
+    margin-left: 30px;
+    white-space: nowrap;
+  }
+  .career-desc{
+    margin-left: 100px;
+    text-align: left;
+    font-size: 2.0rem;
+  }
+  .career-desc.only{
+    margin-left: 215px;
+  }
+  .career-list.only::before{
+    width: 0;
+    height: 0;
+  }
+  .career-img{
+    width: 45vw;
+    border-radius: 50px;
+    opacity: 0.4;
+    filter: blur(2px);
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  /*------------------------skill--------------------------------*/
+.skills ul{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.skill-content{
+    width: 50%;
+    margin-bottom: 60px;
+    align-items: center;
+}
+.skill-img{
+    max-width: 150px;
+    min-width: 150px;
+    width: 100%;
+}
+.skill-img img{
+    width: 100%;
+}
+.skill-img img.change-small{
+    width: 65%;
+}
+.skill-description{
+    text-align: left;
+    padding: 0 25px;
+}
+.skill-title{
+    font-size: 2.0rem;
+    margin-bottom: 20px;
+}
+.skill-desc{
+    font-size: 1.6rem;
+}
+
+/*---------------------------------------------------------------------*/
+/*------------------------レスポンシブ対応--------------------------------*/
+/*---------------------------------------------------------------------*/
+
+/*--------------------------------------------------------
+    タブレット・モバイル対応
+--------------------------------------------------------*/
+
+@media (max-width: 767px) {
+/*------------------------top--------------------------------*/
+.top_title{
+    max-width: 300px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+/*------------------------profile--------------------------------*/
+.profile{
+    padding-top: 20px;
+}
+.title-bg{
+    font-size: 10rem;
+}
+.title_jp{
+    margin-left: 0;
+}
+.profile .flex{
+    display: block;
+}
+.profile ul{
+    padding: 50px;
+}
+.profile-desc {
+    font-size: 2.0rem;
+}
+/*------------------------career--------------------------------*/
+.career ul {
+    margin: 0;
+  }
+  .career-date{
+    font-size: 1.6rem;
+  }
+  .career-desc{
+    margin-left: 50px;
+    font-size: 1.6rem;
+  }
+  .career-desc.only{
+    margin-left: 155px;
+  }
+  .career-img{
+    width: 90%;
+    height: 55vh;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+  
+/*------------------------skill--------------------------------*/
+.skills ul{
+  display: block;
+}
+.skill-img{
+    max-width: 100px;
+    min-width: 100px;
+    width: 100%;
+}
+.skill-content{
+    width: 100%;
+    border-bottom: 1px solid #2E2721;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+}
+/*--------------------------------------------------------
+    例外_Works
+--------------------------------------------------------*/
+@media (max-width: 930px) {
+    .works ul {
+        justify-content: center;
+    }
+    .works ul li{
+        margin-right: 0;
+    }
+    .works ul li img{
+        max-width: 350px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+
+}

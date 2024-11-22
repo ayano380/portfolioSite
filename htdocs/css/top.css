@@ -1,0 +1,193 @@
+/*------------------------top--------------------------------*/
+.top{
+    padding-top: 0;
+    padding-bottom: 60px;
+}
+.top img{
+    max-width: 1400px;
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+}
+.top_title{
+    margin-top: -170px;
+    margin-left: 50%;
+    color: #fff;
+    transform: rotate(-10deg);
+}
+.top_title h1{
+    margin-bottom: 45px;
+    font-weight: 400;
+}
+.top_title p{
+   font-size: 2.0rem;
+}
+
+/*------------------------works--------------------------------*/
+.title{
+    font-weight: 400;
+    margin: 20px 0;
+}
+.title_jp{
+    font-weight: 400;
+}
+.works ul {
+    margin-top: 60px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+}
+.works ul li{
+    margin: 0 0 50px 0 ;
+}
+/* .works ul li:nth-child(even){
+    margin-right: 0;
+} */
+.works ul li img{
+    width: 30vw;
+    min-width: 350px;
+    max-width: 500px;
+    object-fit: cover;
+    display: block;    /* 20241122 imgタグはinline要素で、写真配置した際に隙間ができてしまうので、blockに変更 */
+}
+.works{
+    position: relative;
+}
+.yellow-bg {
+    width: 25vw;
+    height: 35vh;
+    opacity: 0.5;
+    position: absolute;
+    top: -6%;
+    left: 15%;
+    z-index: -1;
+}
+.yellow-bg img, .blue-bg img{
+    width: 100%;
+    height: 100%;
+}
+.blue-bg{
+    width: 30%;
+    height: 50%;
+    position: absolute;
+    bottom: 270px;
+    right: 5%;
+    z-index: -1;
+}
+
+
+/*------------------------about--------------------------------*/
+.about{
+    position: relative;
+}
+.about ul {
+    margin-top: 60px;
+}
+.aboutme_img{
+    width: 100%;
+    max-width: 410px;
+    height: 40vh;
+    border-radius: 30px;
+    object-fit: cover;
+}
+.about_description{
+    background-color: #FFF;
+    max-width: 370px;
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 150px;
+    margin-left: -40px;
+}
+.about_description_content{
+    font-size: 1.6rem;
+    text-align: right;
+}
+.about_description p{
+    padding: 50px 30px 30px;
+    /* padding-top: 90px;
+    padding-bottom: 30px; */
+    text-align: left;
+}
+.view_button{
+    display: inline-block;
+    background-color: #FFF;
+    color: #5B3900;
+    border: 1px solid #5B3900;
+    border-radius: 20px;
+    padding: 2px 25px;
+    margin-bottom: 50px;
+    margin-right: 30px;
+}
+.view_button:hover{
+    background-color: #5B3900;
+    color: #FFF;
+}
+.yellow-bg_about{
+    width: 80%;
+    height: 40%;
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: 400px;
+    z-index: -1;
+}
+.yellow-bg_about img{
+ width: 100%;
+ height: 100%;
+}
+
+
+
+/*---------------------------------------------------------------------*/
+/*------------------------レスポンシブ対応--------------------------------*/
+/*---------------------------------------------------------------------*/
+
+/*--------------------------------------------------------
+    タブレット・モバイル対応
+--------------------------------------------------------*/
+
+@media (max-width: 767px) {
+/*------------------------top--------------------------------*/
+.top_title{
+    margin: -150px auto 0;
+}
+.top_title h1{
+    margin-bottom: 30px;
+    font-size: 10rem;
+}
+.top_title p{
+   font-size: 1.8rem;
+}
+/*------------------------works--------------------------------*/
+
+/*------------------------about--------------------------------*/
+.about ul {
+    display: block;
+}
+.about_description{
+   margin: 0 auto;
+}
+.aboutme_img{
+    max-width: 310px;
+}
+
+}
+
+/*--------------------------------------------------------
+    例外_Works
+--------------------------------------------------------*/
+@media (max-width: 930px) {
+    .works ul {
+        justify-content: center;
+    }
+    .works ul li{
+        margin-right: 0;
+    }
+    .works ul li img{
+        max-width: 350px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!--メディアクエリを有効にする記述　-->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>ポートフォリオ</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="js/common.js" />
+    <link rel="stylesheet" href="css/about.css" />
+
+    <!-- fonts -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet"/> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet"/> -->
+    <link href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" rel="stylesheet">
+
+    <!-- jQuery読み込み-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container flex">
+        <div class="portfolio">
+          <a href="index.html">Portfolio</a>
+        </div>
+        <div class="nav">
+          <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+          <input id="drawer_input" class="drawer_hidden" type="checkbox" />
+          <!-- ハンバーガーアイコン -->
+          <label for="drawer_input" class="drawer_open"><span></span></label>
+          <nav class="pc-nav">
+            <ul class="flex menu-lists">
+              <li class="menu-lists_content hover-marker homeonly"><a href="index.html">Home</a></li>
+              <li class="menu-lists_content only-works hover-marker">
+                <a href="index.html#works">Works</a>
+                <ul class="dropdown_lists">
+                  <li class="dropdown_list"><a href="work_nekonosu.html">保護猫カフェサイト</a></li>
+                  <li class="dropdown_list"><a href="work_sugutabe.html">スグ食べLP</a></li>
+                  <li class="dropdown_list"><a href="work_portfolio.html">ポートフォリオサイト</a></li>
+                  <li class="dropdown_list"><a href="work_banner.html">イベントバナー</a></li>
+                  <li class="dropdown_list"><a href="work_kawachi.html">河内町役場名刺</a></li>
+                  <li class="dropdown_list"><a href="work_cardme.html">自分の名刺</a></li>
+                </ul>
+              </li>
+              <li class="menu-lists_content hover-marker"><a href="about.html">About</a></li>
+              <li class="menu-lists_content hover-marker"><a href="#contact">Contact</a></li>
+            </ul>
+            <ul class="menu_sns-icon">
+                <li class="icon"><a href="https://twitter.com/non_no_design"><i class="fa-brands fa-x-twitter icon-size"></i></a></li>
+                <li class="icon"><a href="https://www.instagram.com/non_no_design/"><i class="fa-brands fa-instagram icon-size"></i></a></li>
+                <li class="icon"><a href="mailto:non.marine380@gmail.com"><i class="fa-regular fa-envelope icon-size"></i></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="top">
+            <img src="images/about/top.webp" alt="top画像"/>
+          <div class="top_title">
+            <h2>- About -</h2>
+            <h3>私について</h3>
+          </div>
+      </section>
+      <section class="profile">
+        
+        <div class="container">
+          <p class="title-bg js-slidein_left">Profile</p>
+          <h3 class="title_jp">プロフィール</h3>
+          <div class="flex">
+            <div>
+              <img class="aboutme_img" src="images/about/aboutme.webp" alt="私の写真" />
+            </div>
+            <ul class="js-slidein_bottom">
+              <li class="profile-content">
+                <p >名前</p>
+                <p class="profile-desc">阿部 綾乃</p>
+              </li>
+              <li class="profile-content">
+                <p>生年月日</p>
+                <p class="profile-desc">1998年8月30日 ( 25歳 )</p>
+              </li>
+              <li class="profile-content">
+                <p>出身地</p>
+                <p class="profile-desc">千葉県</p>
+              </li>
+              <li class="profile-content">
+                <p>趣味</p>
+                <p class="profile-desc">ディズニー、BE:FIRST、動物カフェ</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="career">
+        <div class="container">
+          <p class="title-bg js-slidein_left">Career</p>
+          <h3 class="title_jp">経歴</h3>
+          <ul>
+            <li class="career-list flex js-slidein_bottom">
+              <p class="career-date">2021年3月</p>
+              <p class="career-desc">千葉県にある外語大を卒業</p>
+            </li>
+            <li class="career-list flex js-slidein_bottom">
+              <p class="career-date">2021年4月</p>
+              <p class="career-desc">IT企業に未経験SEとして就職。<br>7月から案件参画。既存システムの運用・保守を担当。</p>
+            </li>
+            <li class="career-list flex js-slidein_bottom">
+              <p class="career-date">2022年7月</p>
+              <p class="career-desc">配属先異動。<br>バックエンド業務を担当。サーバーの構築・運用など。</p>
+            </li>
+            <li class="career-list only flex js-slidein_bottom">
+              <p class="career-desc only">仕事をしていく中で「裏側ではなく、フロント側の目に見える形のものを作りたい！」という思いが芽生える。</p>
+            </li>
+            <li class="career-list flex js-slidein_bottom">
+              <p class="career-date">2023年7月</p>
+              <p class="career-desc">前職を退職し、興味をひかれたWebデザインを学ぶことを決意。</p>
+            </li>
+            <li class="career-list flex js-slidein_bottom">
+              <p class="career-date">2023年8月</p>
+              <p class="career-desc">デジタルハリウッド Webデザイナー専攻を受講。</p>
+            </li>
+            <li class="career-list flex js-slidein_bottom">
+              <p class="career-date">2024年3月</p>
+              <p class="career-desc">コーディングの楽しさに改めて気づき、フロントエンドエンジニアを目指すことに。</p>
+            </li>
+            <li class="career-list flex js-slidein_bottom">
+              <p class="career-date">2024年6月</p>
+              <p class="career-desc">転職活動を得て、SEを本業として再始動。</p>
+            </li>
+          </ul>
+          <img class="career-img" src="images/about/carrer_bg.webp" alt="career_bg">
+        </div>
+      </section>
+      <section class="skills">
+        <div class="container">
+          <p class="title-bg js-slidein_left">Skills</p>
+          <h3 class="title_jp">スキルセット</h3>
+          <ul class="flex">
+            <li class="skill-content flex js-slidein_bottom">
+              <div class="skill-img">
+                <img src="images/about/skill/htmlcss.webp" alt="htmlcss">
+              </div>
+              <div class="skill-description">
+                <p class="skill-title">HTML/CSS</p>
+                <p class="skill-desc">Webサイトを１から構築できます。レスポンシブ対応、基本的なコーディングは対応可能です。ホバーやスライドショーなども実装できます。</p>
+              </div>
+            </li>
+            <li class="skill-content flex js-slidein_bottom">
+              <div class="skill-img">
+                <img class="change-small" src="images/about/skill/javascript.webp" alt="javascript">
+              </div>
+              <div class="skill-description">
+                <p class="skill-title">Javascript</p>
+                <p class="skill-desc">ライブラリの実装、基本的なアニメーション（Jquery）を使用した動的なサイト構築が可能です。</p>
+              </div>
+            </li>
+            <li class="skill-content flex js-slidein_bottom">
+              <div class="skill-img">
+                <img src="images/about/skill/illustrator.webp" alt="illustrator">
+              </div>
+              <div class="skill-description">
+                <p class="skill-title">illustrator</p>
+                <p class="skill-desc">簡単なロゴ作成、名刺作成に使用しています。基本機能は問題なく使用できます。</p>
+              </div>
+            </li>
+            <li class="skill-content flex js-slidein_bottom">
+              <div class="skill-img">
+                <img src="images/about/skill/photoshop.webp" alt="photoshop">
+              </div>
+              <div class="skill-description">
+                <p class="skill-title">Photoshop</p>
+                <p class="skill-desc">バナー作成やワイヤーフレーム・デザインカンプ作成に使用しています。
+                  figma、Adobe XDをメインで使用していますが、基本的なツールは問題なく使用することができます。
+                  </p>
+              </div>
+            </li>
+            <li class="skill-content flex js-slidein_bottom">
+              <div class="skill-img">
+                <img src="images/about/skill/xdfigma.webp" alt="xd,figma">
+              </div>
+              <div class="skill-description">
+                <p class="skill-title">Adobe XD, Figma</p>
+                <p class="skill-desc">ワイヤーフレーム、デザインカンプ作成の際にメインで使用しています。そのため、スムーズに作業することが可能です。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <ul class="flex">
+          <li class="contact">
+            <h2 id="contact">- Contact -</h2>
+            <h3>お問い合わせ</h3>
+            <div>
+              <a href="https://twitter.com/non_no_design"><i class="fa-brands fa-x-twitter icon-size"></i></a>
+              <a href="https://www.instagram.com/non_no_design/"><i class="fa-brands fa-instagram icon-size"></i></a>
+              <a href="mailto:non.marine380@gmail.com"><i class="fa-regular fa-envelope icon-size"></i></a>
+            </div>
+          </li>
+          <li class="footer_menu">
+            <a href="index.html">Home</a>
+            <a href="index.html#works">Works</a>
+            <a href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- JavaScript 読み込み　-->
+  <script src="js/common.js"></script>
+  </body>
+</html>
